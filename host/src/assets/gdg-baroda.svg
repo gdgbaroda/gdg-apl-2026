@@ -1,10 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 120">
-  <rect width="320" height="120" rx="16" fill="#0b1020"/>
-  <g font-family="Inter, system-ui, sans-serif" font-weight="800" text-anchor="middle">
-    <text x="160" y="48" font-size="32" fill="#ffffff">
-      <tspan fill="#4285F4">G</tspan><tspan fill="#EA4335">D</tspan><tspan fill="#FBBC04">G</tspan>
-      <tspan fill="#ffffff"> Baroda</tspan>
-    </text>
-    <text x="160" y="88" font-size="18" fill="#34A853" letter-spacing="6">DEVELOPER GROUP</text>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 120"><rect width="320" height="120" fill="#0b1020" rx="16"/><g font-family="Inter, system-ui, sans-serif" font-weight="800" text-anchor="middle"><text x="160" y="48" fill="#fff" font-size="32"><tspan fill="#4285F4">G</tspan><tspan fill="#EA4335">D</tspan><tspan fill="#FBBC04">G</tspan> <tspan fill="#fff"> Baroda</tspan></text><text x="160" y="88" fill="#34A853" font-size="18" letter-spacing="6">DEVELOPER GROUP</text></g></svg>
