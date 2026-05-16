@@ -48,7 +48,7 @@
     const burstCap = Math.min(n, 25); // per-message cap; visual is enough
     for (let i = 0; i < burstCap; i++) {
       if (particles.length >= MAX_PARTICLES) break;
-      const size = 18 + Math.random() * 16;          // was 28-52
+      const size = 24 + Math.random() * 20;
       particles.push({
         glyph,
         x: Math.random() * W,
