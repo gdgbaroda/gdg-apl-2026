@@ -23,9 +23,24 @@ This starts Vite (quiz strip on :5173) and Electron (the shell window with Hotst
 ## Files
 
 - `electron/main.cjs` — window + Chrome UA spoof for the Hotstar webview
-- `shell.html` — grid layout: webview (top) + quiz iframe (bottom 22vh)
+- `shell.html` — grid layout: webview (top) + quiz iframe (bottom 22vh) + reactions canvas overlay
+- `electron/reactions-overlay.js` — canvas particles fed by `wss://apl-api.gdgbaroda.com/host`
 - `src/App.tsx` — quiz strip, keyboard-driven
 - `src/challenges.json` — the two challenges, one per innings
+
+## Reactions overlay
+
+Attendees tap emojis at `apl.gdgbaroda.com/reactions/`; the host receives bucketed counts via WS and animates flying emojis.
+
+Set the secret before dev/build — it's baked into the packaged app by `scripts/bake-config.cjs` (runs automatically before each `dist:*`):
+
+```
+export APL_HOST_SECRET=<value from CF wrangler secret>
+npm run dev       # dev: read at runtime from env
+npm run dist:dmg  # release: baked into electron/build-config.json
+```
+
+`APL_API_BASE` defaults to `https://apl-api.gdgbaroda.com` and can be overridden for local API dev. `electron/build-config.json` is gitignored.
 
 ## Notes
 

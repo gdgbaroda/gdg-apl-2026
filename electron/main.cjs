@@ -10,6 +10,13 @@ const CHROME_UA =
 
 const REPO = 'gdgbaroda/gdg-apl-host-2026';
 
+// Build-time baked config (written by scripts/bake-config.cjs). Falls back to
+// env vars for dev. Prefer the baked file so packaged builds work without env.
+let bakedCfg = {};
+try { bakedCfg = require('./build-config.json'); } catch (_) { /* dev mode */ }
+const APL_API_BASE = bakedCfg.apiBase || process.env.APL_API_BASE || 'https://apl-api.gdgbaroda.com';
+const APL_HOST_SECRET = bakedCfg.hostSecret || process.env.APL_HOST_SECRET || '';
+
 function quizUrl() {
   if (!app.isPackaged && process.env.NODE_ENV !== 'production') {
     return 'http://localhost:5173/';
@@ -147,8 +154,10 @@ function createWindow() {
 
   win.webContents.once('did-finish-load', () => {
     const url = quizUrl();
+    const aplCfg = { apiBase: APL_API_BASE, hostSecret: APL_HOST_SECRET };
     win.webContents.executeJavaScript(
-      `document.getElementById('quiz').src = ${JSON.stringify(url)};`,
+      `document.getElementById('quiz').src = ${JSON.stringify(url)};` +
+      `window.__APL__ = ${JSON.stringify(aplCfg)};`,
     );
   });
 

@@ -10,6 +10,11 @@ if [[ -n "$(git status --porcelain)" ]]; then
   exit 1
 fi
 
+if [[ -z "${APL_HOST_SECRET:-}" ]]; then
+  echo "APL_HOST_SECRET must be exported before releasing (baked into build)." >&2
+  exit 1
+fi
+
 if git rev-parse "$TAG" >/dev/null 2>&1; then
   echo "Tag $TAG already exists." >&2
   exit 1

@@ -28,6 +28,11 @@
       }
       .stage { display: grid; grid-template-rows: 1fr 22vh; height: 100vh; }
       webview, iframe { width: 100%; height: 100%; border: 0; background: #000; }
+      #reactions-canvas {
+        position: absolute; inset: 0;
+        pointer-events: none;
+        z-index: 5;
+      }
     </style>
   </head>
   <body>
@@ -41,6 +46,7 @@
         ></webview>
         <iframe id="quiz" src="about:blank"></iframe>
       </div>
+      <canvas id="reactions-canvas"></canvas>
     </div>
 
     <div id="poster">
@@ -63,5 +69,7 @@
         }
       });
     </script>
+
+    <script src="./electron/reactions-overlay.js"></script>
   </body>
 </html>
