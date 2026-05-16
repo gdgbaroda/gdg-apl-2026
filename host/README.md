@@ -18,7 +18,7 @@ This starts Vite (quiz strip on :5173) and Electron (the shell window with Hotst
 1. In the Electron window, log in to Hotstar (mobile OTP). Session persists via the `persist:hotstar` partition.
 2. Navigate the top pane to the live match.
 3. Press `F11` to fullscreen onto the projector.
-4. Use `→` / `Space` / `←` on the keyboard to advance between innings-1 and innings-2 challenges.
+4. Press `F2` to toggle the QR sticker (hide it temporarily during big match moments).
 
 ## Files
 

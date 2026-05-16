@@ -163,6 +163,12 @@ function createWindow() {
     win.setFullScreen(!win.isFullScreen());
   });
 
+  globalShortcut.register('F2', () => {
+    win.webContents.executeJavaScript(
+      "document.getElementById('qr-overlay').classList.toggle('hidden')",
+    ).catch(() => {});
+  });
+
   buildMenu(win);
 
   if (AUTO_UPDATE_SUPPORTED && app.isPackaged) {
