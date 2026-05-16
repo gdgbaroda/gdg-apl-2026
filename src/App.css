@@ -1,0 +1,125 @@
+:root {
+  color-scheme: dark;
+  font-family: 'Google Sans', 'Inter', system-ui, -apple-system, Segoe UI, sans-serif;
+  --g-blue: #4285F4;
+  --g-red:  #EA4335;
+  --g-yel:  #FBBC04;
+  --g-grn:  #34A853;
+}
+
+html, body, #root {
+  margin: 0;
+  height: 100%;
+  background: #000;
+  color: #fff;
+  overflow: hidden;
+}
+
+.strip {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 22vw 1fr 18vw;
+  grid-template-rows: 100%;
+  align-items: stretch;
+  gap: 1.5vw;
+  padding: 1vw 2vw;
+  box-sizing: border-box;
+  background: #000;
+  position: relative;
+  min-height: 0;
+}
+.strip::before {
+  content: '';
+  position: absolute; left: 0; right: 0; top: 0; height: 4px;
+  background: linear-gradient(90deg,
+    var(--g-blue) 0 25%,
+    var(--g-red)  25% 50%,
+    var(--g-yel)  50% 75%,
+    var(--g-grn)  75% 100%);
+}
+
+/* ── Brand block ── */
+.brand {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5vw;
+  border-right: 1px solid rgba(255,255,255,0.12);
+  padding-right: 1vw;
+}
+.brand-top {
+  font-size: 1.05vw;
+  letter-spacing: 0.04em;
+  opacity: 0.7;
+}
+.brand-event {
+  font-size: 1.5vw;
+  font-weight: 700;
+  line-height: 1.1;
+}
+.brand-event .dot { color: var(--g-yel); margin: 0 0.2vw; }
+.brand-host {
+  display: flex;
+  align-items: center;
+  gap: 0.6vw;
+  background: #fff;
+  color: #202124;
+  padding: 0.45vw 0.8vw;
+  border-radius: 0.5vw;
+  align-self: flex-start;
+  margin-top: 0.3vw;
+}
+.brand-host img { height: 4vh; width: auto; display: block; }
+
+/* ── Challenge body ── */
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.6vw;
+  min-width: 0;
+}
+.title {
+  font-size: 1.3vw;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+  color: #fff;
+}
+.innings-pill {
+  font-size: 1vw;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  background: var(--g-yel);
+  color: #111;
+  padding: 0.35vw 0.9vw;
+  border-radius: 0.4vw;
+}
+.prompt {
+  font-size: 1.45vw;
+  font-weight: 500;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: rgba(255,255,255,0.92);
+}
+
+/* ── Hero illustration ── */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+.hero img {
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
