@@ -137,4 +137,57 @@
     }, { threshold: 0.4 });
     io.observe(podium);
   }
+
+  // ──── Pre-event mode: reactions sender ────
+  // Only activates when the body has data-mode="pre-event" and emoji
+  // buttons exist (data-id attribute, vs the celebration mode's data-glyph).
+  if (document.body.dataset.mode === 'pre-event') {
+    const API = document.body.dataset.api || '';
+    const FLUSH_MS = 250;
+    const pending = Object.create(null);
+    const status = document.getElementById('status');
+    document.querySelectorAll('.btn[data-id]').forEach(b => {
+      b.addEventListener('pointerdown', () => {
+        const id = b.dataset.id;
+        pending[id] = (pending[id] || 0) + 1;
+        b.classList.remove('burst');
+        void b.offsetWidth;
+        b.classList.add('burst');
+        if (navigator.vibrate) navigator.vibrate(8);
+      }, { passive: true });
+    });
+
+    let inFlight = false;
+    async function flush() {
+      if (inFlight || !API) return;
+      const keys = Object.keys(pending);
+      if (keys.length === 0) return;
+      inFlight = true;
+      try {
+        for (const id of keys) {
+          let remaining = pending[id];
+          delete pending[id];
+          while (remaining > 0) {
+            remaining -= 1;
+            const res = await fetch(`${API}/reactions/send`, {
+              method: 'POST',
+              headers: { 'content-type': 'application/json' },
+              body: JSON.stringify({ e: id, n: 1 }),
+              keepalive: true,
+            });
+            if (res.status === 429) { setStatus('slow down', false); return; }
+            if (!res.ok) throw new Error('HTTP ' + res.status);
+          }
+        }
+        setStatus('live', true);
+      } catch { setStatus('offline', false); }
+      finally { inFlight = false; }
+    }
+    function setStatus(text, live) {
+      if (!status) return;
+      status.textContent = text;
+      status.classList.toggle('live', !!live);
+    }
+    setInterval(flush, FLUSH_MS);
+  }
 })();
