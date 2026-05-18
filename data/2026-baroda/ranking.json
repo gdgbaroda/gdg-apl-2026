@@ -156,25 +156,6 @@
     "rank": 8
   },
   {
-    "slug": "shivansh-darji__habit-warrior",
-    "name": "Shivansh Darji",
-    "title": "Habit Warrior",
-    "challenge": "Gamified Habit Builder",
-    "scores": {
-      "agentic": 1,
-      "demo": 9,
-      "quality": 7,
-      "fit": 9,
-      "originality": 8
-    },
-    "total": 34,
-    "reason": "Genuinely creative angle \u2014 every habit is summoned as a 3D monster (slime/orc/dragon), and completing a habit literally strikes the enemy in a Three.js arena. Live GitHub Pages demo loads (200). Vanilla JS but well-decomposed (HabitStore / Game / UI layers across game.js, habits.js, ui.js, tracker.js, analytics.js, charts.js, sound.js), with transparent combat math, achievements, streak combo bonuses, and a WebAudio SFX synth. README is exceptional. The killer flaw for an Agentic-AI hackathon: no AI at all \u2014 'as builder' just means Cursor authored it. Pure originality + execution carry the score.",
-    "demo_check": "2xx",
-    "ai_evidence": "no AI code found; Cursor was used as code editor only",
-    "rollback_state": "head-already-in-window",
-    "rank": 9
-  },
-  {
     "slug": "darshit-kotecha__habit-quest-epicdaily",
     "name": "Darshit Kotecha",
     "title": "Habit Quest / EpicDaily",
@@ -191,7 +172,7 @@
     "demo_check": "2xx",
     "ai_evidence": "@google/genai in package.json; gemini-flash-latest call in server.ts:22",
     "rollback_state": "head-already-in-window",
-    "rank": 10
+    "rank": 9
   },
   {
     "slug": "yash-patel__habitquest",
@@ -210,7 +191,7 @@
     "demo_check": "no-url",
     "ai_evidence": "groq-sdk in backend/package.json; tool-calling loop with multi-tool definitions in backend/controllers/aiController.js",
     "rollback_state": "head-already-in-window",
-    "rank": 11
+    "rank": 10
   },
   {
     "slug": "deep-vadher__lifequest-ai",
@@ -229,7 +210,7 @@
     "demo_check": "2xx",
     "ai_evidence": "no AI code \u2014 aiResponses object in app/coach/page.js is hardcoded literal strings, zero fetch/axios calls in app/",
     "rollback_state": "head-already-in-window",
-    "rank": 12
+    "rank": 11
   },
   {
     "slug": "kuldeepsinh-jhala__levelup-ai",
@@ -248,7 +229,7 @@
     "demo_check": "no-url",
     "ai_evidence": "@google/generative-ai used in BE-AI/ai/gemini.js (multi-key Gemini 2.0 Flash); proxied via BE/src/services/aiProxy.js",
     "rollback_state": "head-already-in-window",
-    "rank": 13
+    "rank": 12
   },
   {
     "slug": "riyank-singh__ipl-ground-intelligence",
@@ -267,7 +248,7 @@
     "demo_check": "video",
     "ai_evidence": "no AI runtime \u2014 only FastAPI/pydantic/uvicorn in requirements.txt; submitter explicitly states AI was a dev-time tool",
     "rollback_state": "head-already-in-window",
-    "rank": 14
+    "rank": 13
   },
   {
     "slug": "farhaanali-vohra__apple",
@@ -286,7 +267,7 @@
     "demo_check": "no-url",
     "ai_evidence": "Nebius DeepSeek V3.2 fetch call in src/services/nlpService.js (chat/completions endpoint, JSON-only system prompt); config in src/config.js",
     "rollback_state": "head-already-in-window",
-    "rank": 15
+    "rank": 14
   },
   {
     "slug": "zishan-vhora__lockin",
@@ -305,7 +286,7 @@
     "demo_check": "no-url",
     "ai_evidence": "no AI code found; @supabase/supabase-js is the only external service; 'Vibe Coding' was used as the build methodology, not a runtime feature",
     "rollback_state": "head-already-in-window",
-    "rank": 16
+    "rank": 15
   },
   {
     "slug": "daksh-thakurani__streaksmith",
@@ -324,6 +305,29 @@
     "demo_check": "no-url",
     "ai_evidence": "no AI code found; form states 'used open code for architecture' only",
     "rollback_state": "head-already-in-window",
+    "rank": 16
+  },
+  {
+    "slug": "shivansh-darji__habit-warrior",
+    "name": "Shivansh Darji",
+    "title": "Habit Warrior",
+    "challenge": "Gamified Habit Builder",
+    "scores": {
+      "agentic": 1,
+      "demo": 9,
+      "quality": 7,
+      "fit": 9,
+      "originality": 8
+    },
+    "total": 29,
+    "reason": "Genuinely creative angle \u2014 every habit is summoned as a 3D monster (slime/orc/dragon), and completing a habit literally strikes the enemy in a Three.js arena. Live GitHub Pages demo loads (200). Vanilla JS but well-decomposed (HabitStore / Game / UI layers across game.js, habits.js, ui.js, tracker.js, analytics.js, charts.js, sound.js), with transparent combat math, achievements, streak combo bonuses, and a WebAudio SFX synth. README is exceptional. The killer flaw for an Agentic-AI hackathon: no AI at all \u2014 'as builder' just means Cursor authored it. Pure originality + execution carry the score.",
+    "demo_check": "2xx",
+    "ai_evidence": "no AI code found; Cursor was used as code editor only",
+    "rollback_state": "head-already-in-window",
+    "raw_total": 34,
+    "override_delta": -5,
+    "override_label": "Volunteer adjustment",
+    "override_reason": "Shivansh served as an event volunteer during APL 2026 in addition to submitting a project. To preserve fairness for non-volunteer participants, a transparency adjustment of \u22125 is applied to his total. The judges' scoring of his project is unchanged \u2014 this disclosure exists so the conflict of interest is visible on the public scoreboard rather than hidden.",
     "rank": 17
   },
   {
@@ -422,25 +426,6 @@
     "rank": 22
   },
   {
-    "slug": "harsh-mehta__cricketiq",
-    "name": "Harsh Mehta",
-    "title": "CricketIQ",
-    "challenge": "Data & Insights",
-    "scores": {
-      "agentic": 2,
-      "demo": 3,
-      "quality": 5,
-      "fit": 5,
-      "originality": 4
-    },
-    "total": 19,
-    "reason": "Form claims a RAG pipeline, but src/utils/ragEngine.js is a fake/simulated 'agent' \u2014 keyword-overlap 'cosine similarity', hardcoded if/else routing (live_match/prediction/player_stats), and pre-baked answer strings with simulated 800-1400ms latency. @google/generative-ai is listed in package.json but never imported anywhere in src/. All match data is static mock JSON. UI exists (Dashboard, PlayerAnalytics, FloatingChat) and looks polished, but the 'AI analyst' is a sham. No live demo URL.",
-    "demo_check": "no-url",
-    "ai_evidence": "@google/generative-ai in package.json but no GoogleGenerativeAI import in src/; ragEngine.js is keyword matching + hardcoded responses",
-    "rollback_state": "head-already-in-window",
-    "rank": 23
-  },
-  {
     "slug": "keyur-parmar__nexus",
     "name": "Keyur parmar",
     "title": "NEXUS",
@@ -457,7 +442,7 @@
     "demo_check": "2xx",
     "ai_evidence": "form-only (Lovable-generated app; no repo to inspect)",
     "rollback_state": "no-repo",
-    "rank": 24
+    "rank": 23
   },
   {
     "slug": "dev-parikh__cricpulse",
@@ -476,7 +461,7 @@
     "demo_check": "no-url",
     "ai_evidence": "form-only (claims Tavily + cricket API; no repo to verify)",
     "rollback_state": "no-repo",
-    "rank": 25
+    "rank": 24
   },
   {
     "slug": "aadi-shah__beyond-the-score",
@@ -495,7 +480,7 @@
     "demo_check": "no-url",
     "ai_evidence": "Gemini 1.5 Flash REST call in MatchNarration.jsx (key constant empty); no package.json or SDK declared",
     "rollback_state": "needs-rollback",
-    "rank": 26
+    "rank": 25
   },
   {
     "slug": "shlok-tilokani__ipl-dashboard",
@@ -514,26 +499,7 @@
     "demo_check": "no-url",
     "ai_evidence": "no AI code found; .ai/ folder is coding-agent context, not runtime AI",
     "rollback_state": "needs-rollback",
-    "rank": 27
-  },
-  {
-    "slug": "ashutosh-bhagat__apl-analytics",
-    "name": "Ashutosh Bhagat",
-    "title": "APL-Analytics",
-    "challenge": "Data & Insights",
-    "scores": {
-      "agentic": 2,
-      "demo": 1,
-      "quality": 4,
-      "fit": 5,
-      "originality": 3
-    },
-    "total": 15,
-    "reason": "Vite/React shell with a Node server (server/index.js) that proxies cricapi.com and serves mock standings/live-match data. Critically, src/ is empty \u2014 only the prebuilt dist/ bundle exists, so source review is impossible. No AI library is imported anywhere; the only 'AI' artifact is .claude/settings.local.json showing they used Claude Code as an IDE. Form admits AI was used 'for creating UI and statistical insights' (i.e., coding assistant, not in-app). No live demo URL, no README. Reasonable cricket-data scaffolding but the runtime app cannot be verified and there is zero agentic content.",
-    "demo_check": "no-url",
-    "ai_evidence": "no AI code found; only .claude/settings.local.json (Claude Code IDE config)",
-    "rollback_state": "head-already-in-window",
-    "rank": 28
+    "rank": 26
   },
   {
     "slug": "nipun-kulshrestha__andren",
@@ -552,7 +518,30 @@
     "demo_check": "no-url",
     "ai_evidence": "no AI code found; deps are @supabase/supabase-js and zustand only",
     "rollback_state": "head-already-in-window",
-    "rank": 29
+    "rank": 27
+  },
+  {
+    "slug": "harsh-mehta__cricketiq",
+    "name": "Harsh Mehta",
+    "title": "CricketIQ",
+    "challenge": "Data & Insights",
+    "scores": {
+      "agentic": 2,
+      "demo": 3,
+      "quality": 5,
+      "fit": 5,
+      "originality": 4
+    },
+    "total": 14,
+    "reason": "Form claims a RAG pipeline, but src/utils/ragEngine.js is a fake/simulated 'agent' \u2014 keyword-overlap 'cosine similarity', hardcoded if/else routing (live_match/prediction/player_stats), and pre-baked answer strings with simulated 800-1400ms latency. @google/generative-ai is listed in package.json but never imported anywhere in src/. All match data is static mock JSON. UI exists (Dashboard, PlayerAnalytics, FloatingChat) and looks polished, but the 'AI analyst' is a sham. No live demo URL.",
+    "demo_check": "no-url",
+    "ai_evidence": "@google/generative-ai in package.json but no GoogleGenerativeAI import in src/; ragEngine.js is keyword matching + hardcoded responses",
+    "rollback_state": "head-already-in-window",
+    "raw_total": 19,
+    "override_delta": -5,
+    "override_label": "Volunteer adjustment",
+    "override_reason": "Harsh Mehta served as an event volunteer during APL 2026 in addition to submitting a project. To preserve fairness for non-volunteer participants, a transparency adjustment of \u22125 is applied to his total. The judges' scoring of his project is unchanged \u2014 this disclosure exists so the conflict of interest is visible on the public scoreboard rather than hidden.",
+    "rank": 28
   },
   {
     "slug": "ishan-chavda__habitquest",
@@ -571,7 +560,7 @@
     "demo_check": "2xx",
     "ai_evidence": "form-only ('used a for Q&A'); no repo, can't verify",
     "rollback_state": "no-repo",
-    "rank": 30
+    "rank": 29
   },
   {
     "slug": "soni-jeet__habitforge",
@@ -590,26 +579,7 @@
     "demo_check": "no-url",
     "ai_evidence": "form-only ('Antigravity' is a dev tool, not product AI); no repo",
     "rollback_state": "no-repo",
-    "rank": 31
-  },
-  {
-    "slug": "naiteek__solo-leveling-habit-tracker",
-    "name": "Naiteek",
-    "title": "Solo leveling habit tracker",
-    "challenge": "Gamified Habit Builder",
-    "scores": {
-      "agentic": 2,
-      "demo": 1,
-      "quality": 1,
-      "fit": 4,
-      "originality": 5
-    },
-    "total": 13,
-    "reason": "_clone_status is bad-url \u2014 'Source code URL' was Sololeveling.Naiteekchoksi.com (a domain, not a repo), and curl on both http/https returns 000 (DNS/connection fails). No code to review. Form says AI is 'using n8n' and stack is 'Cursor, claude' \u2014 n8n could enable an agentic workflow but there is zero artifact to verify. The Solo Leveling anime theming is the only originality hook. Scored on form-only with heavy no-code/no-demo penalty.",
-    "demo_check": "timeout",
-    "ai_evidence": "form-only; 'n8n' workflow claimed but no repo to inspect",
-    "rollback_state": "no-repo",
-    "rank": 32
+    "rank": 30
   },
   {
     "slug": "nirav-lad__momentum-ai",
@@ -628,7 +598,7 @@
     "demo_check": "no-url",
     "ai_evidence": "form-only (Hugging Face free LLM claimed; clone failed, no code)",
     "rollback_state": "no-repo",
-    "rank": 33
+    "rank": 31
   },
   {
     "slug": "preet-bhanuprasad-patel__sportsiq",
@@ -647,7 +617,30 @@
     "demo_check": "no-url",
     "ai_evidence": "form-only (no source URL provided)",
     "rollback_state": "no-repo",
-    "rank": 34
+    "rank": 32
+  },
+  {
+    "slug": "ashutosh-bhagat__apl-analytics",
+    "name": "Ashutosh Bhagat",
+    "title": "APL-Analytics",
+    "challenge": "Data & Insights",
+    "scores": {
+      "agentic": 2,
+      "demo": 1,
+      "quality": 4,
+      "fit": 5,
+      "originality": 3
+    },
+    "total": 10,
+    "reason": "Vite/React shell with a Node server (server/index.js) that proxies cricapi.com and serves mock standings/live-match data. Critically, src/ is empty \u2014 only the prebuilt dist/ bundle exists, so source review is impossible. No AI library is imported anywhere; the only 'AI' artifact is .claude/settings.local.json showing they used Claude Code as an IDE. Form admits AI was used 'for creating UI and statistical insights' (i.e., coding assistant, not in-app). No live demo URL, no README. Reasonable cricket-data scaffolding but the runtime app cannot be verified and there is zero agentic content.",
+    "demo_check": "no-url",
+    "ai_evidence": "no AI code found; only .claude/settings.local.json (Claude Code IDE config)",
+    "rollback_state": "head-already-in-window",
+    "raw_total": 15,
+    "override_delta": -5,
+    "override_label": "Volunteer adjustment",
+    "override_reason": "Ashutosh served as an event volunteer during APL 2026 in addition to submitting a project. To preserve fairness for non-volunteer participants, a transparency adjustment of \u22125 is applied to his total. The judges' scoring of his project is unchanged \u2014 this disclosure exists so the conflict of interest is visible on the public scoreboard rather than hidden.",
+    "rank": 33
   },
   {
     "slug": "sara-bhuva__habitquest",
@@ -666,7 +659,7 @@
     "demo_check": "no-url",
     "ai_evidence": "form-only; gemini/stitch/antigravity cited as build-time coding tools, no repo",
     "rollback_state": "no-repo",
-    "rank": 35
+    "rank": 34
   },
   {
     "slug": "jaimin-suthar__gamified-habit-builder",
@@ -685,7 +678,7 @@
     "demo_check": "2xx",
     "ai_evidence": "form-only (clone failed, demo page is a near-empty template)",
     "rollback_state": "no-repo",
-    "rank": 36
+    "rank": 35
   },
   {
     "slug": "zels-sorathiya__habitforge",
@@ -704,6 +697,29 @@
     "demo_check": "no-url",
     "ai_evidence": "rolled-back repo is default create-next-app scaffolding only; no AI SDK, no code at deadline",
     "rollback_state": "needs-rollback",
+    "rank": 36
+  },
+  {
+    "slug": "naiteek__solo-leveling-habit-tracker",
+    "name": "Naiteek",
+    "title": "Solo leveling habit tracker",
+    "challenge": "Gamified Habit Builder",
+    "scores": {
+      "agentic": 2,
+      "demo": 1,
+      "quality": 1,
+      "fit": 4,
+      "originality": 5
+    },
+    "total": 8,
+    "reason": "_clone_status is bad-url \u2014 'Source code URL' was Sololeveling.Naiteekchoksi.com (a domain, not a repo), and curl on both http/https returns 000 (DNS/connection fails). No code to review. Form says AI is 'using n8n' and stack is 'Cursor, claude' \u2014 n8n could enable an agentic workflow but there is zero artifact to verify. The Solo Leveling anime theming is the only originality hook. Scored on form-only with heavy no-code/no-demo penalty.",
+    "demo_check": "timeout",
+    "ai_evidence": "form-only; 'n8n' workflow claimed but no repo to inspect",
+    "rollback_state": "no-repo",
+    "raw_total": 13,
+    "override_delta": -5,
+    "override_label": "Volunteer adjustment",
+    "override_reason": "Naiteek served as an event volunteer during APL 2026 in addition to submitting a project. To preserve fairness for non-volunteer participants, a transparency adjustment of \u22125 is applied to his total. The judges' scoring of his project is unchanged \u2014 this disclosure exists so the conflict of interest is visible on the public scoreboard rather than hidden.",
     "rank": 37
   },
   {
